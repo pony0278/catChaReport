@@ -354,6 +354,7 @@
           <Property Name="Favorite ID" Type="int" />
           <Property Name="CheckinDayCount" Type="int" />
           <Property Name="MyCatNameListID" Type="int" />
+          <Property Name="RunGameHighestScore" Type="int" />
         </EntityType>
         <EntityType Name="Shop_MyCatNameList">
           <Key>
@@ -1854,6 +1855,7 @@
           <NavigationProperty Name="Shop_MyCatNameList1" Relationship="Self.FK_Shop_MyCatNameList_Shop_Member_Info" FromRole="Shop_Member_Info" ToRole="Shop_MyCatNameList" />
           <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_訂單總表_Shop_會員資訊" FromRole="Shop_Member_Info" ToRole="Shop_Order_Total_Table" />
           <NavigationProperty Name="Shop_Product_Review_Table" Relationship="Self.FK_Shop_商品評論表_Shop_會員資訊" FromRole="Shop_Member_Info" ToRole="Shop_Product_Review_Table" />
+          <Property Name="RunGameHighestScore" Type="Int32" />
         </EntityType>
         <EntityType Name="Shop_MyCatNameList">
           <Key>
@@ -3317,6 +3319,7 @@
           <EntitySetMapping Name="Shop_Member_Info">
             <EntityTypeMapping TypeName="catchaModel.Shop_Member_Info">
               <MappingFragment StoreEntitySet="Shop_Member Info">
+                <ScalarProperty Name="RunGameHighestScore" ColumnName="RunGameHighestScore" />
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Member_Account" ColumnName="Member Account" />
                 <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
